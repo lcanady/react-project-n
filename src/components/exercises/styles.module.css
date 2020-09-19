@@ -1,0 +1,12 @@
+/* Card Container */
+
+.listContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.topBar {
+  display: 'block';
+  padding: '2em';
+  margin: '1em 1em 0 1em';
+}
