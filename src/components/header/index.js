@@ -19,7 +19,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.module.css';
 import Logo from '../../images/milfitLogo.png';
-
+import propTypes from 'prop-types'
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -223,6 +223,12 @@ export default function Header() {
 // Header.propTypes = {
 //   loggedIn: PropTypes.bool,
 // };
+
+
+Header.propTypes ={
+  loggedIn: propTypes.bool,
+}
+
 
 Header.defaultProps = {
   loggedIn: false,
