@@ -1,61 +1,24 @@
 {
-  "name": "reactjs",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "bootstrap": "^4.5.2",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-router-prop-types": "^1.0.5",
-    "react-scripts": "3.4.3",
-    "reactstrap": "^8.5.1"
-  },
+  "name": "capstone-project-2009-nicholashubbard",
+  "version": "1.0.0",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "precommit": "lint-staged"
+    "reactjs": "cd reactjs && npm start",
+    "api": "cd api && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run reactjs\"",
+    "start": "node api/server.js",
+    "install-reactjs": "npm i --prefix reactjs",
+    "install-api": "npm i --prefix api",
+    "build-reactjs": "npm run build --prefix reactjs",
+    "heroku-postbuild": "concurrently \"npm:install-*\"; concurrently \"npm:build-*\"; "
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "express": "^4.16.4",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.6",
-    "lint-staged": "^10.4.0",
-    "prettier": "^2.1.2",
-    "style-loader": "^1.2.1"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier — single-quote — write",
-      "git add"
-    ]
+    "concurrently": "^5.3.0"
   }
 }

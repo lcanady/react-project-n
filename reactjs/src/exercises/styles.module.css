@@ -1,0 +1,27 @@
+/* Card Container */
+
+.card {
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  position: 'relative';
+  top: 0px;
+}
+
+.media {
+  height: 200px;
+  padding: 5em 1em 5em 1em;
+  position: 'relative';
+  top: 0px;
+}
+
+.listContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topBar {
+  display: block;
+  padding: 2em 0 1em 0;
+}
